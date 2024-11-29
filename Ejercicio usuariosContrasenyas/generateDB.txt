@@ -1,0 +1,26 @@
+CREATE DATABASE usuariosContrasenyas;
+
+USE usuariosContrasenyas;
+
+CREATE TABLE usuarios (
+    nombre_usuario VARCHAR(50) PRIMARY KEY,
+    contrasena_usuario VARCHAR(255) NOT NULL
+);
+
+
+
+
+INSERT INTO usuarios (nombre_usuario, contrasena_usuario) VALUES
+('juan123', 'contraseña123'),
+('maria456', 'contraseña456'),
+('pedro789', 'contraseña789'),
+('ana321', 'contraseña321'),
+('luis654', 'contraseña654');
+
+INSERT INTO usuarios (nombre_usuario, contrasena_usuario)
+VALUES
+    ('usuario1', SHA2('contrasena1', 256)),
+    ('usuario2', SHA2('contrasena2', 256)),
+    ('usuario3', SHA2('contrasena3', 256)),
+    ('usuario4', SHA2('contrasena4', 256)),
+    ('usuario5', SHA2('contrasena5', 256));
